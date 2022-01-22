@@ -15,12 +15,13 @@ public class SortList {
 		System.out.println(sortedList);
 	}
 	
+	//Filtering even numbers
 	public List<Integer> evennumbers(){
 		List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8);
 		return list.stream().filter(t -> (t%2)==0).collect(Collectors.toList());
 	}
 	
-	
+	//Filtering odd numbers
 	public List<Integer> oddnumbers(){
 		List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8);
 		return list.stream().filter(t -> (t%2)!=0).collect(Collectors.toList());
