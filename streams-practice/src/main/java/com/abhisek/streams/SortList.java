@@ -14,5 +14,16 @@ public class SortList {
 		
 		System.out.println(sortedList);
 	}
+	
+	public List<Integer> evennumbers(){
+		List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8);
+		return list.stream().filter(t -> (t%2)==0).collect(Collectors.toList());
+	}
+	
+	
+	public List<Integer> oddnumbers(){
+		List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8);
+		return list.stream().filter(t -> (t%2)!=0).collect(Collectors.toList());
+	}
 
 }
