@@ -28,7 +28,7 @@ public class SortList {
 		return list.stream().filter(t -> (t%2)!=0).collect(Collectors.toList());
 	}
 	
-	//method to fing god
+	//method to find god
 	public Optional<String> findGod(){
 		List<String> list = Arrays.asList("God","Gita","Ganga","Gau");
 		Optional<String> thee = list.stream().filter(t -> t.equalsIgnoreCase("god")).findAny();

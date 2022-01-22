@@ -3,7 +3,10 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import com.abhisek.streams.SortList;
@@ -15,7 +18,10 @@ public class SortListTest {
 	
 
 	}
-	
+
+	/*
+	 * @Before public void createSortList() { SortList sortlist = new SortList(); }
+	 */
 	@Test
 	public void evennumbers_test(){
 		//Given
@@ -32,6 +38,14 @@ public class SortListTest {
 		List<Integer> expected = Arrays.asList(1,3,5,7);
 		List<Integer> actual = sortlist.oddnumbers();
 		assertArrayEquals(expected.toArray(), actual.toArray());
+	}
+	
+	@Test
+	public void findGod_test() {
+		SortList sortlist = new SortList();
+		Optional<String> actual = sortlist.findGod();
+		Optional<String> expected = Optional.ofNullable("God");
+		assertEquals(expected, actual);
 	}
 
 }
